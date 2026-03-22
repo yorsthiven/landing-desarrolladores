@@ -24,16 +24,19 @@
     <meta name="twitter:title" content="AlejYors | Software Engineer" />
     <meta name="twitter:description"
         content="Soluciones tecnológicas para firmas profesionales y automatización de procesos industriales." />
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body class="bg-slate-950 text-slate-300 font-sans selection:bg-blue-500 selection:text-white">
-    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
+    <!-- <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto"> -->
+    <nav
+        class="p-6 sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 flex justify-between items-center max-w-6xl mx-auto">
         <div class="text-xl font-mono font-bold text-white tracking-tighter">
             <img src="assets/img/logo.svg" alt="Logo AlejYors" class="h-10 w-auto inline-block" />
         </div>
-        <div class="p-3 text-xl font-mono font-bold text-white tracking-tighter">
+        <!-- <div class="p-3 text-xl font-mono font-bold text-white tracking-tighter">
             <span class="text-blue-500">&lt;</span>Desarrolladores<span class="text-blue-500">/&gt;</span>
-        </div>
+        </div> -->
         <div class="space-x-8 text-sm uppercase tracking-widest hidden md:block">
             <a href="#proyectos" class="hover:text-blue-400 transition">Proyectos</a>
             <a href="#servicios" class="hover:text-blue-400 transition">Servicios</a>
@@ -65,7 +68,7 @@
             Casos de Éxito
         </h2>
         <div class="grid md:grid-cols-2 gap-10">
-            <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-blue-500/50 transition group">
+            <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-blue-500/50 transition group card-hidden" data-scroll-animate>
                 <span class="text-blue-500 font-mono text-sm">SaaS / Automation</span>
                 <h3 class="text-2xl font-bold text-white mt-2 mb-4">WorkScan</h3>
                 <p class="text-slate-400 mb-6">
@@ -80,7 +83,7 @@
                 </div>
             </div>
 
-            <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition">
+            <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition card-hidden" data-scroll-animate>
                 <span class="text-emerald-500 font-mono text-sm">Fintech / Legal Tech</span>
                 <h3 class="text-2xl font-bold text-white mt-2 mb-4">
                     Infraestructura para Firmas Legales
@@ -98,26 +101,22 @@
         </div>
     </section>
 
-    <a
-      href="https://wa.me/3168874293?text=Hola,%20deseo%20consultar%20sobre%20una%20landing%20page"
-      class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transition-all transform hover:scale-110 z-[100]"
-      target="_blank"
-    >
-      <i class="fab fa-whatsapp text-3xl"></i>
-      <span class="absolute -top-1 -right-1 flex h-4 w-4">
-        <span
-          class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"
-        ></span>
-        <span
-          class="relative inline-flex rounded-full h-4 w-4 bg-green-500"
-        ></span>
-      </span>
+    <a href="https://wa.me/3168874293?text=Hola,%20deseo%20consultar%20sobre%20una%20landing%20page"
+        class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transition-all transform hover:scale-110 z-[100]"
+        target="_blank">
+        <i class="fab fa-whatsapp text-3xl"></i>
+        <span class="absolute -top-1 -right-1 flex h-4 w-4">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-4 w-4 bg-green-500"></span>
+        </span>
     </a>
 
     <footer class="py-10 text-center border-t border-slate-900 text-slate-600 text-sm">
         &copy; 2026 Yors Dev | Desarrollado con el stack más eficiente del
         mercado.
     </footer>
+
+    <script src="js/animations.js"></script>
 </body>
 
 </html>
