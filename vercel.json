@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/clientes/:cliente/(.*)",
+      "destination": "/clientes/:cliente/index.html"
+    },
+    {
+      "source": "/clientes/:cliente",
+      "destination": "/clientes/index.html"
+    }
+  ]
+}

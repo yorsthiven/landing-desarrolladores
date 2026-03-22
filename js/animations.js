@@ -1,21 +1,16 @@
 // Animación de tarjetas al hacer scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+// Nota: La lógica principal está en scripts.js con inicializarAnimacionesTarjetas()
+// Este archivo mantiene la configuración de CSS de animaciones
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.remove('card-hidden');
-            entry.target.classList.add('animate-slide-in');
-        } else {
-            entry.target.classList.remove('animate-slide-in');
-            entry.target.classList.add('card-hidden');
+// Si por alguna razón las tarjetas no fueron observadas, ejecutar de nuevo al cargar
+window.addEventListener('load', () => {
+    // Pequeño delay para asegurar que todo esté cargado
+    setTimeout(() => {
+        const tarjetas = document.querySelectorAll('[data-scroll-animate]');
+        if (tarjetas.length > 0 && !tarjetas[0].classList.contains('animate-slide-in')) {
+            if (typeof inicializarAnimacionesTarjetas === 'function') {
+                inicializarAnimacionesTarjetas();
+            }
         }
-    });
-}, observerOptions);
-
-document.querySelectorAll('[data-scroll-animate]').forEach(card => {
-    observer.observe(card);
+    }, 100);
 });
